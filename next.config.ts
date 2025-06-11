@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   basePath: isGitHubPages ? '/robotics-startup' : '',
-  assetPrefix: isGitHubPages ? '/robotics-startup/' : '',
+  assetPrefix: isGitHubPages ? '/robotics-startup' : '',
 };
 
 export default nextConfig;
