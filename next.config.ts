@@ -9,8 +9,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isGitHubPages ? '/robotics-startup' : '',
-  assetPrefix: isGitHubPages ? '/robotics-startup' : '',
+  basePath: '/robotics_startup',
+  assetPrefix: '/robotics_startup',
+  distDir: 'out',
 };
 
 export default nextConfig;

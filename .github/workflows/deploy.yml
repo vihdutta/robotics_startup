@@ -28,8 +28,6 @@ jobs:
       run: npm ci
 
     - name: Build
-      env:
-        DEPLOY_TARGET: github-pages
       run: npm run build
 
     - name: Add .nojekyll file
