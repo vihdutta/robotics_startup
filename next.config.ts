@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/robotics-startup' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/robotics-startup/' : '',
+  basePath: process.env.GITHUB_ACTIONS ? '/robotics-startup' : '',
+  assetPrefix: process.env.GITHUB_ACTIONS ? '/robotics-startup/' : '',
 };
 
 export default nextConfig;
