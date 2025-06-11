@@ -1,13 +1,16 @@
 import type { NextConfig } from "next";
 
+// Check for GitHub Pages deployment
+const isGitHubPages = process.env.DEPLOY_TARGET === 'github-pages';
+
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true,
   },
-  basePath: process.env.GITHUB_ACTIONS ? '/robotics-startup' : '',
-  assetPrefix: process.env.GITHUB_ACTIONS ? '/robotics-startup/' : '',
+  basePath: isGitHubPages ? '/robotics-startup' : '',
+  assetPrefix: isGitHubPages ? '/robotics-startup/' : '',
 };
 
 export default nextConfig;
